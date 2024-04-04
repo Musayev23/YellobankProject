@@ -1,0 +1,93 @@
+.mobile-top {
+  // position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  padding: 0 20px;
+  // position: fixed;
+  overflow: hidden;
+  // position: relative;
+  background-color: $white;
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  &.hidden{
+    height: 0;
+  }
+  
+  .hed {
+      height: 120px;
+      @include Flexible($align:center,$justify:space-between);
+      .logo-side {
+      @include Flexible ($align:center);
+      .mobile-logo {
+        padding: 0 20px 0 0;
+        a {
+          width: 64px;
+          height: 64px;
+          padding: 20px 10px;
+          border-radius: 12px;
+          display: inline-block;
+          color: $secondary-color;
+          background-color: #ffc82d;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      p {
+        font-size: 17px;
+        line-height: 1.33;
+        color: $secondary-color;
+      }
+    }
+    .new-link {
+      margin-left: 10px;
+      ul {
+        display: flex;
+        border-radius: 5px;
+        background-color: $white;
+        border: 1px solid $Grey40;
+        li {
+          width: 140px;
+          padding: 10px 5px 15px 10px;
+          div {
+            padding: 0 0 0 24px;
+            color: $secondary-color;
+            background-repeat: no-repeat;
+            background-size: $font-size-lgm;
+
+            @media(max-width:600px){
+              background-size: $font-size-md;
+            };
+            @media(max-width:992px){
+              background-size: $font-size-lgs;
+            };
+            span {
+              font-size: $font-size-m;
+            }
+            p {
+              font-weight: 600;
+              font-size: $font-size-sm;
+            }
+          }
+        }
+      }
+    }
+    .r-side {
+        @include Flexible($align:center,$align-content:center);
+      .close {
+        display: inline-block;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+
